@@ -1,0 +1,38 @@
+# Ignore core files and folders.
+/web/core
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+/vendor/
+
+# Ignore Drupal's file directory.
+/web/sites/*/files/
+/web/sites/*/private/
+
+# Ignore SimpleTest files
+/web/sites/simpletest
+
+# Ignore settings.local.php, development.services.yml
+# as they are specific to the local environment.
+/web/sites/*/settings.local.php
+/web/sites/*/development.services.yml
+
+# Ignore cache files
+/web/sites/default/files/php/
+
+# Ignore Mac specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore node_modules
+/node_modules/
+
+# Ignore build artifacts
+/dist/
+/build/
+
+# Ignore IDE settings
+.idea/
+.vscode/
