@@ -1,69 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
-
-$primary-green: #27ae60;
-$secondary-green: #2ecc71;
-$light-green: #97d4b3;
-$background-green: rgb(51 182 119);
-
-$text-dark: #333333;
-$text-light: #666666;
-$text-gray: #999999;
-$text-super-light-gray: #a9a9a9;
-
-$border-color: #e0e0e0;
-$light-gray: #cccccc;
-$background-light: #f7f7f7;
-$white: #ffffff;
-$black: #000000;
-
-$font-family-base: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$font-family-heading: 'Montserrat', sans-serif;
-
-$font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
-$font-weight-extrabold: 800;
-
-$font-size-xs: 0.75rem;
-$font-size-sm: 0.875rem;
-$font-size-base: 1rem;
-$font-size-md: 1.125rem;
-$font-size-lg: 1.25rem;
-$font-size-xl: 1.5rem;
-$font-size-xxl: 2rem;
-$font-size-xxxl: 2.5rem;
-$font-size-display: 4rem;
-
-$line-height-base: 1.6;
-$line-height-heading: 1.2;
-
-$space-xs: 0.5rem;
-$space-sm: 1rem;
-$space-md: 1.5rem;
-$space-lg: 2.5rem;
-$space-xl: 4rem;
-
-$border-radius: 4px;
-$border-width: 1px;
-
-$breakpoint-lg: 1024px;
-$breakpoint-md: 768px;
-$breakpoint-sm: 480px;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: $font-family-base;
-  color: $text-dark;
-  background-color: $white;
-}
+@import 'variables_drupal';
 
 p {
   font-size: $font-size-md;
@@ -85,188 +21,12 @@ h6 {
   font-family: $font-family-heading;
 }
 
-.banner-with-v-shape {
-  position: relative;
-  background-size: cover;
-  background-position: center top;
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  font-family: $font-family-base;
-}
-
-.banner-with-v-shape::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: $secondary-green;
-  clip-path: polygon(0 100%, 0 0, 100% 100%, 100% 100%);
-  z-index: 1;
-}
-
-.hero-main-titles {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  margin-bottom: $space-xl;
-}
-
-.hero-title-main {
-  font-family: $font-family-heading;
-  font-size: $font-size-display;
-  font-weight: $font-weight-bold;
-  color: $secondary-green;
-  margin: 0;
-  line-height: $line-height-heading;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba($black, 0.3);
-}
-
-.hero-title-sub {
-  font-size: $font-size-xxxl;
-  font-weight: $font-weight-light;
-  color: rgba($white, 0.9);
-  margin: $space-xs 0 0;
-  line-height: $line-height-heading;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba($black, 0.3);
-}
-
-.hero-bottom-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 $space-sm $space-xl;
-}
-
-.hero-description {
-  color: rgba($white, 0.95);
-  font-weight: $font-weight-light;
-  text-shadow: 1px 1px 3px rgba($black, 0.5);
-  margin-bottom: $space-lg;
-}
-
-.hero-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: $space-md;
-  flex-wrap: wrap;
-}
-
-.hero-logos img {
-  height: 55px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(1.1) drop-shadow(1px 1px 2px rgba($black, 0.3));
-}
-
-@media (max-width: $breakpoint-lg) {
-  .hero-title-main {
-    font-size: 3rem;
-  }
-
-  .hero-title-sub {
-    font-size: $font-size-xxl;
-    letter-spacing: 5px;
-  }
-}
-
-@media (max-width: $breakpoint-md) {
-  .banner-with-v-shape {
-    min-height: 500px;
-  }
-
-  .hero-title-main {
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-  }
-
-  .hero-title-sub {
-    font-size: $font-size-xl;
-    letter-spacing: 3px;
-  }
-
-  .hero-description {
-    font-size: $font-size-base;
-  }
-
-  .banner-with-v-shape::after {
-    height: 80px;
-  }
-
-  .hero-logos img {
-    height: 45px;
-  }
-
-  .hero-logos {
-    gap: $space-sm;
-  }
-}
-
-@media (max-width: $breakpoint-sm) {
-  .banner-with-v-shape {
-    min-height: 450px;
-  }
-
-  .hero-title-main {
-    font-size: 1.8rem;
-  }
-
-  .hero-title-sub {
-    font-size: $font-size-lg;
-    letter-spacing: 2px;
-  }
-
-  .hero-description {
-    font-size: $font-size-sm;
-  }
-
-  .hero-logos {
-    gap: 15px;
-  }
-
-  .hero-logos img {
-    height: 40px;
-  }
-
-  .banner-with-v-shape::after {
-    height: 60px;
-  }
-}
-
 .info-block {
   &__text-content {
-    background-color: $background-green;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle fill='%23e0e0e0' fill-opacity='0.4' cx='10' cy='10' r='1.5'/%3E%3C/svg%3E");
     min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    p {
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  &__image-display {
-    height: 500px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Hopital_Broussais_-_panoramio.jpg');
-    background-size: cover;
-    background-position: center;
-    display: block;
   }
 }
 
@@ -295,69 +55,25 @@ h6 {
   }
 }
 
-.container {
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $space-sm;
-  padding-right: $space-sm;
-}
-
 .project-details {
-  padding-top: 5%;
-  font-family: $font-family-base;
   position: relative;
   background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill-opacity='0.1' fill='%23cccccc'%3E%3Cpath d='M60 120V0L0 30v60L60 120zM0 30l60-30L120 30v60L60 120 0 90V30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 300px;
 
-  &__header {
-    margin-bottom: $space-md;
-  }
-
-  &__title {
-    font-family: $font-family-heading;
-    font-size: $font-size-xxxl;
-    color: $primary-green;
-    margin: 0;
-    font-weight: $font-weight-bold;
-  }
-
-  &__subtitle {
-    font-size: $font-size-xl;
-    color: $primary-green;
-    margin: 0;
-    font-weight: $font-weight-light;
-    letter-spacing: 1px;
-  }
-
-  &__divider {
-    border: 0;
-    height: 1px;
-    background-color: $light-gray;
-    margin-bottom: $space-lg;
-  }
-
+  &__title,
+  &__subtitle,
   &__section-title {
-    font-family: $font-family-heading;
     color: $primary-green;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-bold;
-    margin-top: $space-md;
-    margin-bottom: $space-sm;
   }
 
   &__list {
-    list-style: none;
-    padding-left: 0;
     color: $text-dark;
-    line-height: $line-height-base;
 
     li {
-      padding-left: $space-sm;
+      padding-left: 1.25rem;
       position: relative;
-      margin-bottom: $space-xs;
 
       &::before {
         content: '•';
@@ -368,160 +84,29 @@ h6 {
         line-height: 1.3;
       }
     }
-
-    ul {
-      list-style: none;
-      padding-left: $space-sm;
-      margin-top: $space-xs;
-    }
   }
 
-  &__image-container {
-    margin: $space-lg 0;
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: $border-radius;
-    }
-  }
-
-  &__columns {
-    display: flex;
-    gap: $space-lg;
-  }
-
-  &__column {
-    flex: 1;
-  }
-}
-
-@media (max-width: $breakpoint-md) {
-  .project-details {
-    &__columns {
-      flex-direction: column;
-    }
-
-    &__title {
-      font-size: $font-size-xxl;
-    }
-
-    &__subtitle {
-      font-size: $font-size-lg;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-sm) {
-  .project-details {
-    padding-left: $space-sm;
+  @media (max-width: 576px) {
     background-size: 200px;
-
-    &__title {
-      font-size: 1.8rem;
-    }
-
-    &__subtitle {
-      font-size: $font-size-md;
-    }
   }
 }
 
 .ecosystem-block {
-  padding: $space-lg 0;
-  position: relative;
 
-  &__header {
-    margin-bottom: $space-md;
-  }
-
-  &__title {
-    font-size: $font-size-xxxl;
-    color: $primary-green;
-    margin: 0;
-    font-weight: $font-weight-bold;
-  }
-
-  &__subtitle {
-    font-size: 1.5rem;
-    color: $primary-green;
-    margin: 0;
-    font-weight: $font-weight-light;
-    text-transform: uppercase;
-  }
-
-  &__divider {
-    border: 0;
-    height: 1px;
-    background-color: $light-gray;
-    margin: $space-md 0 $space-lg 0;
-  }
-
-  &__row {
-    display: flex;
-    gap: $space-xl;
-    align-items: flex-start;
-    margin-bottom: $space-lg;
-  }
-
-  &__col {
-    flex: 1;
-    min-width: 0;
-
-    &:last-child {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-  }
-
-  &__large-text {
-    font-family: $font-family-heading;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: $text-dark;
-    line-height: 1.4;
-    margin-bottom: $space-lg;
-  }
-
-  &__highlight {
-    color: $primary-green;
-    font-weight: $font-weight-bold;
-  }
-
-  &__visual {
-    margin-bottom: $space-lg;
-
-    img {
-      max-width: 250px;
-      height: auto;
-    }
-  }
-
-  &__text-group {
-    width: 100%;
-  }
-
+  &__title,
+  &__subtitle,
+  &__highlight,
   &__section-title {
     color: $primary-green;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-bold;
-    margin-bottom: $space-sm;
+    font-family: $font-family-heading;
   }
 
   &__list {
-    list-style: none;
-    padding-left: 0;
-
     li {
       padding-left: 1.2rem;
       position: relative;
-      font-size: $font-size-base;
-      font-weight: $font-weight-light;
-      color: #666666;
-      line-height: $line-height-base;
-      margin-bottom: $space-sm;
+      color: $text-dark;
+      font-weight: 300;
 
       &::before {
         content: '•';
@@ -529,74 +114,53 @@ h6 {
         left: 0;
         top: 2px;
         color: $light-gray;
-        font-size: $font-size-lg;
+        font-size: 1.25rem;
       }
     }
   }
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: $space-lg;
-  }
-
+  // Style cho các card
   &__card {
-    padding: $space-md;
-    color: $white;
-
     &--dark-green {
       background-color: $primary-green;
+      color: $white;
+
+      .ecosystem-block__card-list {
+        color: rgba($white, 0.9);
+
+        li::before {
+          color: rgba($white, 0.7);
+        }
+      }
     }
 
     &--light-green {
       background-color: $light-green;
-      color: #000000;
+      color: $text-dark;
 
-      ul {
-        li {
-          color: #000000;
-
-          &::before {
-            color: #000000;
-          }
-        }
+      .ecosystem-block__card-list,
+      .ecosystem-block__card-list li::before {
+        color: $text-dark;
       }
     }
   }
 
   &__card-icon {
-    margin-bottom: $space-sm;
-    text-align: center;
-
     img {
       height: 40px;
       width: auto;
     }
   }
 
-  &__card-title {
-    font-size: $font-size-md;
-    font-weight: $font-weight-bold;
-    margin: 0 0 $space-sm 0;
-  }
-
   &__card-list {
-    list-style: none;
-    padding-left: 0;
-    font-size: $font-size-sm;
-    color: rgba($white, 0.9);
-    line-height: $line-height-base;
-
     li {
       padding-left: 15px;
       position: relative;
-      margin-bottom: $space-xs;
 
       &::before {
         content: '•';
         position: absolute;
         left: 0;
-        color: rgba($white, 0.7);
       }
     }
   }
@@ -654,205 +218,71 @@ h6 {
 }
 
 .rayonnement-block {
-  margin: 0 auto;
-  position: relative;
-  box-shadow: 0 2px 8px rgba($black, 0.1);
-  font-family: $font-family-base;
-
-  &__wrapper {
-    position: relative;
-    z-index: 2;
-    background: rgb(236 238 241);
-    padding-bottom: 45%;
-  }
-
-  &__header {
-    padding: 2.8rem 3.4rem 1.5rem;
-    background: transparent;
-    border-bottom: $border-width solid $border-color;
-    position: relative;
-  }
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   &__title {
     font-family: $font-family-heading;
-    font-weight: 700;
     color: $primary-green;
-    letter-spacing: 1.5px;
-    margin-bottom: $space-xs;
   }
 
   &__subtitle {
-    font-size: 1.5rem;
+    font-family: $font-family-heading;
     color: $primary-green;
     letter-spacing: 3px;
-    text-transform: uppercase;
-    font-family: $font-family-heading;
+  }
+
+  &__intro p,
+  &__text p,
+  &__footer-text p {
+    color: $primary-green;
   }
 
   &__line {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     right: 3.4rem;
     width: 35px;
-    height: 1px;
+    height: 2px;
     background: $primary-green;
   }
 
-  &__intro {
-    padding: 1.8rem 3.4rem;
-    background: transparent;
-
-    p {
-      color: $primary-green;
-      font-weight: $font-weight-semibold;
-      margin: 0;
-    }
-  }
-
-  &__content {
-    padding: 0 3.4rem $space-lg;
-    background: transparent;
-    position: relative;
-  }
-
-  &__item {
-    display: flex;
-    gap: 1.125rem;
-    margin-bottom: 1.75rem;
-    align-items: flex-start;
-
-    &:last-child {
-      margin-bottom: 2.2rem;
-    }
-  }
-
   &__icon {
-    flex-shrink: 0;
     width: 3rem;
     height: 3rem;
-    border: 2px solid $text-dark;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $white;
 
     svg {
       width: 1.625rem;
       height: 1.625rem;
-      color: $text-dark;
     }
   }
 
   &__text {
-    flex: 1;
-    padding-top: 2px;
-
-    p {
-      font-weight: $font-weight-bold;
-      color: $primary-green;
-      margin: 0 0 $space-xs;
-      line-height: 1.4;
-    }
-
     ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
       >li {
-        font-size: 1rem;
-        line-height: $line-height-base;
-        color: $text-light;
-        margin-bottom: $space-xs;
-        padding-left: $space-sm;
+        padding-left: 1.25rem;
         position: relative;
 
         &::before {
           content: '•';
           position: absolute;
           left: 0;
-          color: $text-dark;
-          font-weight: $font-weight-regular;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
+          font-weight: 400;
+          font-size: 1.2rem;
+          line-height: 1;
         }
 
         ul {
-          margin-top: $space-xs;
-          padding-left: 0;
-
           li {
-            font-size: 1rem;
-            padding-left: 1.125rem;
-            margin-bottom: 0.375rem;
-            color: $text-light;
-
             &::before {
               content: '◦';
               left: 3px;
               font-size: 14px;
             }
-
-            &:last-child {
-              margin-bottom: 0;
-            }
           }
         }
       }
-    }
-  }
-
-  &__footer-text {
-    margin-top: $space-md;
-    padding-top: $space-md;
-    border-top: $border-width solid $border-color;
-    padding-left: 8%;
-
-    p {
-      font-weight: $font-weight-bold;
-      color: $primary-green;
-      margin-bottom: 0.75rem;
-      line-height: 1.5;
-    }
-  }
-
-  &__bg-image {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 60%;
-    overflow: hidden;
-    z-index: 2;
-    opacity: 20%;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(to bottom,
-          rgba($white, 0.9) 0%,
-          rgba($white, 0.6) 30%,
-          rgba($white, 0.3) 60%,
-          rgba($white, 0.1) 100%);
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      filter: brightness(0.85) contrast(1.1);
     }
   }
 }
@@ -933,245 +363,56 @@ h6 {
 }
 
 .direction-projet {
-  margin: 0 auto;
-  padding-top: 5%;
-  font-family: $font-family-base;
 
-  &__main-title {
-    font-family: $font-family-heading;
-    font-weight: 700;
+  &__main-title,
+  &__email {
     color: $primary-green;
-    letter-spacing: 1px;
-    margin-bottom: $space-md;
-    text-transform: uppercase;
-  }
-
-  &__subtitle {
-    font-family: $font-family-heading;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-regular;
-    color: $primary-green;
-    margin-bottom: $space-md;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  &__team {
-    margin-bottom: $space-xl;
-  }
-
-  &__members {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $space-lg 3.75rem;
-  }
-
-  &__member {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    p {
-      margin-bottom: $space-xs;
-    }
   }
 
   &__photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: $space-sm;
-    border: 3px solid $light-green;
+    width: 140px;
+    height: 160px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.15));
     }
   }
 
   &__name {
-    color: $text-dark;
-  }
-
-  &__role {
-    color: $text-light;
-  }
-
-  &__phone {
-    color: $text-gray;
-  }
-
-  &__detail {
-    color: $text-gray;
-    max-width: 280px;
-    font-size: 1rem;
-  }
-
-  &__email {
-    color: $primary-green;
-    text-decoration: underline;
-
-    &:hover {
-      color: darken($primary-green, 10%);
+    span {
+      text-transform: uppercase;
     }
   }
 
-  &__equipe {
-    margin-bottom: $space-lg;
-  }
-
-  &__description {
-    margin-bottom: $space-lg;
-
-    p {
-      font-size: $font-size-base;
-      color: $primary-green;
-      font-weight: $font-weight-light;
-      margin-bottom: $space-md;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        font-size: $font-size-base;
-        line-height: $line-height-base;
-        color: $text-dark;
-        font-weight: $font-weight-light;
-        margin-bottom: $space-sm;
-        padding-left: $space-md;
-        position: relative;
-
-        &::before {
-          content: '>';
-          position: absolute;
-          left: 0;
-          color: $primary-green;
-          font-weight: $font-weight-light;
-        }
+  @media (max-width: 992px) {
+    .col-lg-7 {
+      .direction-projet__member {
+        justify-content: center !important;
       }
     }
   }
 
-  &__disciplines-title {
-    font-family: $font-family-heading;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-regular;
-    color: $primary-green;
-    margin-bottom: $space-md;
-    margin-top: $space-lg;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+  @media (max-width: 768px) {
+    &__member {
+      flex-direction: column;
+      text-align: center;
 
-  &__disciplines {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $space-sm $space-lg;
-  }
-
-  &__column {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      li {
-        font-size: $font-size-base;
-        line-height: 1.8;
-        color: $text-dark;
-        font-weight: $font-weight-light;
-        margin-bottom: $space-xs;
+      .order-1 {
+        order: 1 !important;
       }
-    }
-  }
 
-  &__universities {
-    margin-top: $space-lg;
-    padding-top: $space-md;
-    border-top: 2px solid $border-color;
-  }
-
-  &__logos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
-    img {
-      height: 40px;
-      width: auto;
-      object-fit: contain;
-      opacity: 0.7;
-      transition: all 0.3s ease;
-
-      &:hover {
-        filter: grayscale(0%);
-        opacity: 1;
+      .order-2 {
+        order: 2 !important;
       }
-    }
-  }
-}
 
-@media (max-width: $breakpoint-md) {
-  .direction-projet {
-    padding: $space-md $space-sm;
-
-    &__main-title {
-      font-size: $font-size-xl;
-      margin-bottom: $space-md;
-    }
-
-    &__subtitle {
-      font-size: 1.125rem;
-      margin-bottom: $space-sm;
-    }
-
-    &__members {
-      grid-template-columns: 1fr;
-      gap: $space-lg;
-    }
-
-    &__disciplines {
-      grid-template-columns: 1fr;
-      gap: $space-sm;
-    }
-
-    &__logos {
-      gap: $space-sm;
-
-      img {
-        height: 40px;
+      .ms-4 {
+        margin-left: 0 !important;
+        margin-top: 1rem;
       }
-    }
-  }
-}
-
-@media (max-width: $breakpoint-sm) {
-  .direction-projet {
-    padding: $space-sm 15px;
-
-    &__main-title {
-      font-size: $font-size-lg;
-    }
-
-    &__photo {
-      width: 100px;
-      height: 100px;
-    }
-
-    &__name,
-    &__role,
-    &__phone,
-    &__detail,
-    &__email {
-      font-size: $font-size-sm;
     }
   }
 }
@@ -1239,135 +480,121 @@ h6 {
   }
 }
 
-.info-block {
-  font-family: $font-family-base;
+// .hero-with-line {
+//   min-height: 800px;
 
-  &__text-content {
-    background-color: $background-green;
-    color: $white;
-    padding: $space-xl $space-lg;
+//   &__image-container {
+//     height: 450px;
+//     background-size: cover;
+//     background-position: center;
+//   }
 
-    p {
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+//   &__content-container {
+//     position: relative;
+//     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e0e0e0' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
-  &__image-display {
-    height: 500px;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Hopital_Broussais_-_panoramio.jpg');
-    background-size: cover;
-    background-position: center;
-    display: block;
-  }
-}
+//     &::before {
+//       content: '';
+//       position: absolute;
+//       top: 0;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       width: 100%;
+//       height: 25px;
+//       background-color: $primary-green;
+//     }
+//   }
 
+//   &__title {
+//     color: $primary-green;
+//     letter-spacing: 2px;
+//   }
 
-//block1
-.hero-with-line {
-  display: flex;
-  flex-direction: column;
-  min-height: 800px;
-  background-color: $white;
+//   &__subtitle {
+//     color: $primary-green;
+//     letter-spacing: 4px;
+//   }
 
-  &__image-container {
-    height: 450px;
-    overflow: hidden;
-  }
+//   &__logos {
+//     img {
+//       height: 40px;
+//       width: auto;
+//       object-fit: contain;
+//     }
+//   }
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
+//   @media (max-width: 768px) {
+//     min-height: 700px;
 
-  &__content-container {
-    flex: 1;
-    position: relative;
-    padding: $space-xl $space-lg $space-lg;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e0e0e0' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 25px;
-      background-color: $primary-green;
-    }
-  }
-
-  &__title {
-    font-size: 4rem;
-    font-weight: 900;
+//     &__image-container {
+//       height: 350px;
+//     }
+//   }
+// }
+.block-field-blocknodepagetitle {
+  span {
     color: $primary-green;
-    text-transform: uppercase;
+    font-family: $font-family-heading;
+    font-weight: $font-weight-extrabold;
+    font-size: $font-size-xxxl;
     letter-spacing: 2px;
-    margin-bottom: $space-xs;
-    text-align: center;
-  }
-
-  &__subtitle {
-    font-size: 3.5rem;
-    font-weight: 100;
-    color: $primary-green;
     text-transform: uppercase;
-    letter-spacing: 4px;
-    margin-bottom: $space-md;
+    display: block;
+    max-width: 650px;
+    margin: 20px auto 10px auto;
     text-align: center;
-  }
-
-  &__description {
-    font-size: 1.5rem;
-    color: $text-dark;
-    font-weight: $font-weight-regular;
-    text-align: center;
-    margin-bottom: $space-lg;
-  }
-
-  &__logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: auto;
-    width: 100%;
-    padding-bottom: $space-sm;
-
-    img {
-      height: 40px;
-      width: auto;
-      object-fit: contain;
-    }
+    line-height: 1.2;
   }
 }
+.block-field-blocknodepagebody {
+  p {
+    text-align: center;
+    font-size: 2.25rem;
+    color: $text-light;
+    font-weight: $font-weight-light;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+  }
+}
+.logo-strip {
+  img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+  }
+}
+.equipe-projet {
+  &__main-title,
+  &__subtitle,
+  &__disciplines-title {
+    color: $primary-green;
+  }
 
-@media (max-width: $breakpoint-md) {
-  .hero-with-line {
-    min-height: 700px;
+  &__main-title {
+    font-weight: 700;
+  }
+  &__subtitle,
+  &__disciplines-title {
+    font-weight: 300;
+  }
 
-    &__image-container {
-      height: 350px;
-    }
+  &__description p,
+  &__description li,
+  &__disciplines li {
+    color: $light-gray;
+  }
 
-    &__content-container {
-      padding-top: $space-lg;
-    }
+  &__description ul {
+    li {
+      padding-left: 1.5rem;
+      position: relative;
 
-    &__title {
-      font-size: 1.8rem;
-    }
-
-    &__subtitle {
-      font-size: 1.2rem;
+      &::before {
+        content: '>';
+        position: absolute;
+        left: 0;
+        color: $primary-green;
+      }
     }
   }
 }
