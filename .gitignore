@@ -28,3 +28,5 @@ vendor/
 web/core/
 web/modules/contrib/
 web/themes/contrib/
+/web/sites/default/settings.php
+/web/sites/default/files/
